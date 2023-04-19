@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockbuster Orders App</title>
+    <title>Blockbuster - Order List</title>
 </head>
 <body>
-    <h1>Blockbuster Orders App</h1>
+    <h1>Order List: </h1>
     {% for order in orders_list %}
-    <p>{{ order.name }} ordered {{ order.quantity }} movies on the {{ order.order_date }}</p>
+    <a href="/orders/{{loop.index}}">{{loop.index-1}}</a>
     {% endfor %}
-
     
 </body>
 </html>
